@@ -1,5 +1,6 @@
 ### c++ 补充std (leetcode过程中遇到)
 std::swap.   
+深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)
 
 ## C++ 快速入门与刷题重点（与 C/Java/Python 对比）
 
