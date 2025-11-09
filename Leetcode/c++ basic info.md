@@ -1,6 +1,10 @@
 ### c++ 补充std (leetcode过程中遇到)
 std::swap.   
-深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)
+深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)。     
+std::range::sort(Range,Comparator,Projection).  
+    Range,必须。要排序的范围（容器）。,N/A,被排序的对象。
+    Comparator,可选。自定义的比较函数或函数对象。,std::ranges::less,定义排序顺序（如升序 < 或降序 >）。
+    Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
 
 ## C++ 快速入门与刷题重点（与 C/Java/Python 对比）
 
@@ -138,13 +142,6 @@ struct ListNode { // struct 类似于 class，但默认 public
 **总结：** STL 才是 std 中与 Java Collection 框架最相似的部分。
 
 #### `std::vector` 容器
-
-* **`std::vector`：** 是一个**动态数组**。  
-* **等价性：** 它**完全等价**于 Java 中的 `ArrayList` 和 Python 中的 `list`。  
-* **特性：**
-  * 可以在尾部快速插入 (O(1))。
-  * 通过下标快速随机访问 (O(1))，如 `v[i]`。
-  * 在中间或头部插入/删除较慢 (O(N))。
 
 ---
 
