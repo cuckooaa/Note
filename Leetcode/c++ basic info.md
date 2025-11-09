@@ -1,7 +1,7 @@
 ### c++ 补充std (leetcode过程中遇到)
 std::swap.   
 深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)。     
-std::range::sort(Range,Comparator,Projection).  
+std::ranges::sort(Range,Comparator,Projection).  
 - Range,必须。要排序的范围（容器）。,N/A,被排序的对象。
 - Comparator,可选。自定义的比较函数或函数对象。,std::ranges::less,定义排序顺序（如升序 < 或降序 >）。
 - Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
