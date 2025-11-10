@@ -19,6 +19,7 @@ std::views::counted(first, n)。
     - & 的作用： &Student::age 的作用是告诉编译器：“我需要 Student 类中 age 成员的标识符/偏移量。”。          
     - 目的： 在 std::ranges::min_element 算法中，它作为投影 (Projection) 函数，用于告诉算法如何从一个 Student 对象中提取出用于比较的字段。       
 
+在现代 C++ 中，花括号初始化器 ({}) 是万能且最安全的初始化方式，它被称为 统一初始化 (Uniform Initialization)。它可以初始化任何东西：基本类型、聚合类型、容器，以及本例中的类类型（函数对象）。std::ranges::greater 是一个类。使用 greater{} 明确地表示你正在构造并默认初始化这个类的一个临时对象。       
 
 ## C++ 快速入门与刷题重点（与 C/Java/Python 对比）
 
