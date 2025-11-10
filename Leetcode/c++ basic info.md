@@ -6,16 +6,16 @@ std::ranges::sort(Range,Comparator,Projection).
 - Comparator,可选。自定义的比较函数或函数对象。,std::ranges::less,定义排序顺序（如升序 < 或降序 >）。
 - Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
 
-*min_it,具体的 vector 元素对象,取出存储在 min_it 地址上的实际数据。             
-&Student::age,Student 类蓝图中的成员,获取 age 成员在 Student 对象内部的相对位置。             
-    - *min_it：解引用运算符 (Dereference Operator)
-        - min_it 的类型： min_it 是一个迭代器 (Iterator)，它的行为类似一个指针，它存储着 vector 中某个元素的内存地址。            
-        - '*' 的作用： *min_it 使用星号 (*) 来解引用这个迭代器/指针，意思是“取出这个地址所指向的那个元素/对象的值”。            
-        - 目的： 获取 vector 中最小的那个元素本身（例如，获取数字 1）。            
-    - &Student::age：取成员指针运算符 (Address-of Member Pointer)
-        - &Student::age 的类型： 这是一个非静态数据成员指针 (int Student::*)，它不是一个普通的地址。它没有指向具体的内存位置。       
-        - & 的作用： &Student::age 的作用是告诉编译器：“我需要 Student 类中 age 成员的标识符/偏移量。”。          
-        - 目的： 在 std::ranges::min_element 算法中，它作为投影 (Projection) 函数，用于告诉算法如何从一个 Student 对象中提取出用于比较的字段。       
+'*min_it',具体的 vector 元素对象,取出存储在 min_it 地址上的实际数据。             
+'&Student'::age,Student 类蓝图中的成员,获取 age 成员在 Student 对象内部的相对位置。             
+- '*min_it'：解引用运算符 (Dereference Operator)
+    - min_it 的类型： min_it 是一个迭代器 (Iterator)，它的行为类似一个指针，它存储着 vector 中某个元素的内存地址。            
+    - '*' 的作用： *min_it 使用星号 (*) 来解引用这个迭代器/指针，意思是“取出这个地址所指向的那个元素/对象的值”。            
+    - 目的： 获取 vector 中最小的那个元素本身（例如，获取数字 1）。            
+- &Student::age：取成员指针运算符 (Address-of Member Pointer)
+    - &Student::age 的类型： 这是一个非静态数据成员指针 ('int Student::*')，它不是一个普通的地址。它没有指向具体的内存位置。       
+    - & 的作用： &Student::age 的作用是告诉编译器：“我需要 Student 类中 age 成员的标识符/偏移量。”。          
+    - 目的： 在 std::ranges::min_element 算法中，它作为投影 (Projection) 函数，用于告诉算法如何从一个 Student 对象中提取出用于比较的字段。       
 
 
 ## C++ 快速入门与刷题重点（与 C/Java/Python 对比）
