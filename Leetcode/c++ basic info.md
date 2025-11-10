@@ -4,7 +4,8 @@ std::swap.
 std::ranges::sort(Range,Comparator,Projection).  
 - Range,必须。要排序的范围（容器）。,N/A,被排序的对象。
 - Comparator,可选。自定义的比较函数或函数对象。,std::ranges::less,定义排序顺序（如升序 < 或降序 >）。
-- Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。            
+- Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
+
 *min_it,具体的 vector 元素对象,取出存储在 min_it 地址上的实际数据。             
 &Student::age,Student 类蓝图中的成员,获取 age 成员在 Student 对象内部的相对位置。
     1. *min_it：解引用运算符 (Dereference Operator)
