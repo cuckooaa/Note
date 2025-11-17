@@ -21,6 +21,23 @@ std::views::counted(first, n)。
 
 在现代 C++ 中，花括号初始化器 ({}) 是万能且最安全的初始化方式，它被称为 统一初始化 (Uniform Initialization)。它可以初始化任何东西：基本类型、聚合类型、容器，以及本例中的类类型（函数对象）。std::ranges::greater 是一个类。使用 greater{} 明确地表示你正在构造并默认初始化这个类的一个临时对象。       
 
+$\text{Lambda}$ 表达式的基本语法结构如下：
+$$\texttt{[capture list] (parameters) mutable(optional) -> return\_type(optional) \{ function body \}}$$
+1. 变量名和 auto
+auto 关键字用于类型推导。编译器会根据 Lambda 表达式的定义自动推导出 函数 的实际类型（它是一个匿名的函数对象类）。
+2. 捕获列表 (Capture List)
+这是 Lambda 表达式最关键的部分，它决定了 Lambda 内部如何访问它**外部作用域**中的变量。
+[&]：这是引用捕获（Capture by Reference）。它告诉编译器，Lambda 函数体内部使用的所有外部变量（例如 nums）都应该通过引用来访问。
+优势： 避免了拷贝大型对象（如 vector），并且允许在 Lambda 内部修改外部变量（如果 nums 没有被声明为 const 的话）。
+其他常见捕获方式：
+[]：不捕获任何外部变量。
+[=]：值捕获，拷贝所有外部变量。
+$\texttt{[&nums]}$：只引用捕载 nums。
+3. 参数列表 (Parameters)
+这指定了函数被调用时接受的参数类型和名称。这与普通函数参数列表是相同的。
+4. 函数体和返回类型
+{...}：这是 Lambda 函数实际执行的代码块。
+
 ## C++ 快速入门与刷题重点（与 C/Java/Python 对比）
 
 ### 1. 编译和内存管理
