@@ -7,9 +7,9 @@ std::ranges::sort(Range,Comparator,Projection).
 - Comparator,可选。自定义的比较函数或函数对象。,ranges::less,定义排序顺序（如升序 < 或降序 >）,比如ranges::sort(numbers,ranges::greater{});是从大到小。     
 - Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
 
-std::vector<T> sub_array(v.begin() + start_index, v.begin() + end_index + 1);//用来获取数组中的子数组。        
+std::vector<T> sub_array(v.begin() + start_index, v.begin() + end_index + 1);//用来获取数组中的子数组。//这只是vector的一种constructor构建方式        
 
-std::views::counted(first, n)。                
+std::views::counted(first, n)。//它从迭代器开始（其中first就是迭代器），创建包含 n 个元素的视图。                
 
 #### c++中'='的含义
 深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)。 
