@@ -4,7 +4,7 @@ std::swap.
 
 std::ranges::sort(Range,Comparator,Projection).  
 - Range,必须。要排序的范围（容器）。,N/A,被排序的对象。
-- Comparator,可选。自定义的比较函数或函数对象。,std::ranges::less,定义排序顺序（如升序 < 或降序 >）。
+- Comparator,可选。自定义的比较函数或函数对象。,ranges::less,定义排序顺序（如升序 < 或降序 >）,比如ranges::sort(numbers,ranges::greater{});是从大到小。     
 - Projection,可选。投影函数。,std::identity,在比较之前，将元素转换（投影）为用于比较的值。
 
 std::vector<T> sub_array(v.begin() + start_index, v.begin() + end_index + 1);//用来获取数组中的子数组。        
