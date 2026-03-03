@@ -9,6 +9,8 @@ std::ranges::sort(Range,Comparator,Projection).
 
 std::vector<T> sub_array(v.begin() + start_index, v.begin() + end_index + 1);//用来获取数组中的子数组。//这只是vector的一种constructor构建方式        
 
+vector.resize(n, val); //指定新大小 + 新增元素的初始值
+
 std::views::counted(first, n)。//它从迭代器开始（其中first就是迭代器），创建包含 n 个元素的视图。                
 
 #### c++中'='的含义
