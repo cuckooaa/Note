@@ -13,6 +13,16 @@ vector.resize(n, val); //指定新大小 + 新增元素的初始值
 
 std::views::counted(first, n)。//它从迭代器开始（其中first就是迭代器），创建包含 n 个元素的视图。                
 
+#### numerics库   头文件<numeric>
+- abs()       绝对值
+- sqrt()      开平方
+- max()       最大值
+- min()       最小值
+- swap()      交换
+- sort()      排序
+- gcd()       最大公约数
+- lcm()       最小公倍数
+
 #### c++中'='的含义
 深拷贝(直接赋值)：T a = b;(a和b为两个独立的数据)。 
 
